@@ -1,0 +1,1 @@
+../mnli/02_test.sh
