@@ -263,7 +263,9 @@ class FactVerificationTransformer(BaseTransformer):
 
     def ewc_training_step(self, inputs, batch_idx, eps=1e-8):
         outputs = self(**inputs)
-        ewc_loss = 0.5 * self._ewc_loss()
+        ewc_loss = self._ewc_loss()
+        if self.hparams.regularizer == "ewc":
+            ewc_loss = 0.5 * ewc_loss
 
         if self.hparams.regularizer == "rewc":
             ewc_loss = (ewc_loss + eps) ** 0.5
@@ -438,7 +440,7 @@ def main():
 
     model = FactVerificationTransformer(args)
 
-    if args.load_weights:
+    if args.load_weights is not None:
         model.load_weights(args.load_weights)
         if args.regularizer != "none":
             model.register_weights()
