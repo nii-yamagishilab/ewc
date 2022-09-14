@@ -12,6 +12,8 @@
 *.model
 *.jsonl
 *.tsv
+*.csv
+*.pkl
 *.zip
 *.gz
 *.tgz
