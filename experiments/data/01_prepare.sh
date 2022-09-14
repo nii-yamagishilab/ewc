@@ -57,7 +57,7 @@ done
 
 
 # mnli needs a special treatment because the original dev/test sets are identical
-# Select 9k examples from the train set to be the dev set
+# Split 9k examples from the train set to be the dev set
 dir='mnli'
 if [[ ! -f "${dir}/train.orig.jsonl" ]]; then
   mv "${dir}/train.jsonl" "${dir}/train.orig.jsonl"
@@ -76,3 +76,4 @@ ln -nfs fever_symmetric symmetric
 ln -nfs fever_triggers triggers
 
 wc -l {mnli,fever,vitc}/{train,dev,test}.jsonl
+wc -l {adversarial,symmetric,triggers}/test.jsonl
