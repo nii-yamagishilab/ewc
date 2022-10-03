@@ -384,7 +384,6 @@ class FactVerificationTransformer(BaseTransformer):
         parser.add_argument("--use_title", action="store_true")
         parser.add_argument("--no_init", nargs="+", default=[])
         parser.add_argument("--classifier_dropout_prob", type=float, default=0.1)
-        parser.add_argument("--widen_factor", type=int, default=1)
         parser.add_argument(
             "--regularizer",
             type=str,
@@ -392,7 +391,6 @@ class FactVerificationTransformer(BaseTransformer):
             default="none",
         )
         parser.add_argument("--lambda_reg", type=float, default=1.0)
-        parser.add_argument("--do_spectral_norm", action="store_true")
         parser.add_argument("--load_weights", type=str, default=None)
         parser.add_argument("--multiple_training_datasets", action="store_true")
         parser.add_argument("--use_concat_dataset", action="store_true")
