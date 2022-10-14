@@ -44,7 +44,6 @@ python '../../../train.py' \
   --skip_validation \
   --learning_rate 2e-5 \
   --train_batch_size 32 \
-  --eval_batch_size 32 \
   --accumulate_grad_batches 8 \
   --adafactor \
   --warmup_ratio 0.02 \
