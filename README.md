@@ -1,14 +1,16 @@
 # EWC
 
-This is an implementation of our paper: [Mitigating the Diminishing Effect of Elastic Weight Consolidation](https://arxiv.org/abs/).
+This is an implementation of our paper: [Mitigating the Diminishing Effect of Elastic Weight Consolidation](https://aclanthology.org/2022.coling-1.403).
 If you find our code and/or models useful, please cite our paper:
 
 ```bash
-@inproceedings{Kruengkrai2022,
+@inproceedings{kruengkrai-yamagishi-2022-mitigating,
     title = "Mitigating the Diminishing Effect of Elastic Weight Consolidation",
     author = "Canasai Kruengkrai and Junichi Yamagishi",
-    booktitle = "In Proceedings of the 29th International Conference on Computational Linguistics (COLING)",
+    booktitle = "Proceedings of the 29th International Conference on Computational Linguistics",
     year = "2022",
+    url = "https://aclanthology.org/2022.coling-1.403",
+    pages = "4568--4574",
 }
 ```
 
