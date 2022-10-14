@@ -1,0 +1,1 @@
+../../ewc/mnli_1+fever_1+vitc/01_train.sh
