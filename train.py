@@ -306,7 +306,7 @@ class FactVerificationTransformer(BaseTransformer):
         inputs = self.build_inputs(batch)
         outputs = self(**inputs)
         probs = torch.softmax(outputs.logits, dim=-1)
-        return probs
+        return probs.detach().cpu().numpy()
 
     def validation_epoch_end(self, outputs):
         avg_loss = (
